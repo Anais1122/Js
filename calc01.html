@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .bt:hover{
+            background-color: rgb(220, 245, 235);
+        }
+        .bt{
+            background-color: rgb(241, 245, 239);
+            width: 60px;
+            height: 60px;
+            font-size: 40px;
+            border-radius: 30px;
+        }
+     
+        .bt1{
+            background-color: rgb(244, 243, 245);       
+            width: 60px;
+            height: 130px;
+            font-size: 40px;
+            border-radius: 30px;
+        }
+        .in{
+            background-color: rgb(127, 255, 217);
+            width: 250px;
+            height: 60px;
+            font-size: 40px;
+            border-radius: 30px;
+        }
+        .in{
+            background-color: rgb(127, 255, 217);
+            width: 250px;
+            height: 60px;
+            font-size: 40px;
+            border-radius: 30px;
+        }
+        
+    </style>
+    <table border="1" rulse="none">
+        <tr>
+            <td colspan="4"><input type="text" id="input" class="in"></td>
+        </tr>
+        <tr>
+            <td><button id = "div" class="bt"><img src="11.png" width="38" height="38"></button></td>
+            <td><button id = "mul" class="bt"><img src="12.png" width="38" height="38"></button></td>
+            <td><button id = "minus" class="bt"><img src="14.png" width="38" height="38"></button></td>
+            <td><button id = "clear" class="bt">C</button></td>
+            
+        </tr>
+
+        <tr>
+            <td><button id = "seven" class="bt">7</button></td>
+            <td><button id = "eight" class="bt">8</button></td>
+            <td><button id = "nine" class="bt">9</button></td>
+            <td rowspan="2"><button id = "plus" class="bt1"><img src="13.png" width="50" height="60"></button></td>
+
+        </tr>
+        <tr>
+            <td><button id = "four" class="bt">4</button></td>
+            <td><button id = "five" class="bt">5</button></td>
+            <td><button id = "six" class="bt">6</button></td>
+        </tr>
+        <tr>
+            <td><button id = "one" class="bt">1</button></td>
+            <td><button id = "two" class="bt">2</button></td>
+            <td><button id = "three" class="bt">3</button></td>
+            <td rowspan="2"><button id ="enter" class="bt1">=</button></td>
+
+        </tr>
+        <tr>
+            <td><button id = "backspace" class="bt">←</button></td>
+            <td><button id = "zero" class="bt">0</button></td>
+            <td><button id = "comma" class="bt">.</button></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><button id = "NAME" class="bt"><img src="anais.png" width="38" height="38"></button></td>
+        </tr>
+    </table>
+    <script>
+        const input = document.getElementById("input");
+        document.getElementById("one").addEventListener('click',on1);
+        document.getElementById("two").addEventListener('click',on2);
+        document.getElementById("three").addEventListener('click',on3);
+        document.getElementById("four").addEventListener('click',on4);
+        document.getElementById("five").addEventListener('click',on5);
+        document.getElementById("six").addEventListener('click',on6);
+        document.getElementById("seven").addEventListener('click',on7);
+        document.getElementById("eight").addEventListener('click',on8);
+        document.getElementById("nine").addEventListener('click',on9);
+        document.getElementById("plus").addEventListener('click',onplus);
+        document.getElementById("mul").addEventListener('click',onmul);
+        document.getElementById("div").addEventListener('click',ondiv);
+        document.getElementById("minus").addEventListener('click',onminus);
+        document.getElementById("enter").addEventListener('click',onenter);
+        document.getElementById("zero").addEventListener('click',onzero);
+        document.getElementById("comma").addEventListener('click',oncomma);
+        document.getElementById("backspace").addEventListener('click',onbackspace);
+        document.getElementById("clear").addEventListener('click',clear);
+        ar=[];
+        function on1(){
+            ar.push(1)
+            input.value = ar.join("");
+        }
+        function on2(){
+            ar.push(2)
+            input.value = ar.join("");
+        }
+        function on3(){
+            ar.push(3)
+            input.value = ar.join("");
+        }
+        function on4(){
+            ar.push(4)
+            input.value = ar.join("");
+        }
+        function on5(){
+            ar.push(5)
+            input.value = ar.join("");
+        }
+        function on6(){
+            ar.push(6)
+            input.value = ar.join("");
+        }
+        function on7(){
+            ar.push(7)
+            input.value = ar.join("");
+        }
+        function on8(){
+            ar.push(8)
+            input.value = ar.join("");
+        }
+        function on9(){
+            ar.push(9)
+            input.value = ar.join("");
+        }
+        function onplus(){
+            ar.push('+')
+            input.value = ar.join("");
+        }
+        function onmul(){
+            ar.push('*')
+            input.value = ar.join("");
+        }
+        function ondiv(){
+            ar.push('/')
+            input.value = ar.join("");
+        }
+        function onminus(){
+            ar.push('-')
+            input.value = ar.join("");
+        }
+        function onenter(){
+            var sum = ar.join("");
+            input.value = eval(sum);
+            ar=[];
+        }
+        function onzero(){
+            ar.push('0')
+            input.value = ar.join("")
+        }
+        function oncomma(){
+            ar.push('.')
+            input.value = ar.join("")
+        }
+        function onbackspace(){
+            ar.splice(ar.length-1,1);
+            input.value = ar.join("");
+        }
+        function clear(){
+            ar =[];
+            input.value = '';
+        }
+
+    </script>
+</body>
+</html>

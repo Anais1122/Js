@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .inputbox{
+        background-color: rgb(236, 235, 244);
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        font-style: italic;
+        text-align: center
+    }
+    .bt{
+        background-color: aqua;
+    }
+  
+</style>
+<body>
+    <table border="1" >
+        <tr>
+            <td align="center"><img src="aa.png" width="150" height="200"><br>
+                아메리카노<br>
+                <button id = 'aaminus'>-</button><input type="text" id ='aainput' class="inputbox"><button id="aaplus">+</button></td>
+            <td align="center"><img src="coldb.png" width="150" height="200"><br>
+                콜드브루<br>
+                <button id = 'coldbminus'>-</button><input type="text" id ='coldbinput' class="inputbox"><button id="coldbplus">+</button></td>
+            <td align="center"><img src="backsc.png" width="150" height="200"><br>
+                백스자바<br>
+                <button id = 'backscminus'>-</button><input type="text" id ='backscinput' class="inputbox"><button id="backscplus">+</button></td>
+            <td align="center"><img src="backcho.png" width="150" height="200"><br>
+                백스초코<br>
+                <button id = 'backchominus'>-</button><input type="text" id ='backchoinput' class="inputbox"><button id="backchoplus">+</button></td>
+        </tr>
+        <tr>
+            <td align="center"><img src="camo.png" width="150" height="200"><br>
+                황금캐모마일<br>
+                <button id = 'camominus'>-</button><input type="text" id ='camoinput' class="inputbox"><button id="camoplus">+</button></td>
+            <td align="center"><img src="backsba.png" width="150" height="200"><br>
+                백스바나나<br>
+                <button id = 'backsbaminus'>-</button><input type="text" id ='backsbainput' class="inputbox"><button id="backsbaplus">+</button></td>
+            <td align="center"><img src="backsstrw.png" width="150" height="200"><br>
+                백스딸기<br>
+                <button id = 'backsstrwminus'>-</button><input type="text" id ='backsstrwinput' class="inputbox"><button id="backsstrwplus">+</button></td>
+            <td align="center"><img src="milktea.png" width="150" height="200"><br>
+                백스밀크티<br>
+                <button id = 'milkteaminus'>-</button><input type="text" id ='milkteainput' class="inputbox"><button id="milkteaplus">+</button></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><button id="btn_set_clear">초기화</button></td>
+            <td align="center" colspan="2"><button id="btn_total_commit">계산</button></td>
+        </tr>
+    </table>
+    <script>
+        aa_input = document.getElementById("aainput");
+        aa_input.value = 0;
+        document.getElementById("aaplus").addEventListener('click',on_aaplus);
+        document.getElementById("aaminus").addEventListener('click',on_aaminus);
+        document.getElementById("btn_total_commit").addEventListener('click',on_btn_total_commit);
+        document.getElementById("btn_set_clear").addEventListener('click',on_btn_set_clear);
+        function on_aaplus(){
+            aa_input.value++;
+        }
+        function on_aaminus(){
+            if(aa_input.value>0){
+                aa_input.value--;
+            }            
+        }
+        function on_btn_total_commit(){
+            sum = (2000 * aa_input.value)+(2500 * coldb_input.value)+(2500 * backsc_input.value)+(2000 * backcho_input.value)+(3000 * camo_input.value)
+            +(3500 * backsba_input.value)+(4000 * backsstrw_input.value)+(4500 * milktea_input.value);
+            com = sum
+            comma = com.toLocaleString('ko-KR');
+            alert("총 가격은 "+comma+"원 입니다.");
+            sum_input.value='';
+        }
+        function on_btn_set_clear(){
+            location.reload();
+        }    
+        coldb_input = document.getElementById("coldbinput");
+        coldb_input.value = 0;
+        document.getElementById("coldbplus").addEventListener('click',on_coldbplus);
+        document.getElementById("coldbminus").addEventListener('click',on_coldbminus);
+  
+        function on_coldbplus(){
+            coldb_input.value++;
+        }
+        function on_coldbminus(){
+            if(coldb_input.value>0){
+                coldb_input.value--;
+            }            
+        }
+   
+        function on_btn_set_clear(){
+            location.reload();
+        } 
+        backsc_input = document.getElementById("backscinput");
+        backsc_input.value = 0;
+        document.getElementById("backscplus").addEventListener('click',on_backscplus);
+        document.getElementById("backscminus").addEventListener('click',on_backscbminus);
+  
+        function on_backscplus(){
+            backsc_input.value++;
+        }
+        function on_backscbminus(){
+            if(backsc_input.value>0){
+                backsc_input.value--;
+            }            
+        }
+
+        backcho_input = document.getElementById("backchoinput");
+        backcho_input.value = 0;
+        document.getElementById("backchoplus").addEventListener('click',on_backchoplus);
+        document.getElementById("backchominus").addEventListener('click',on_backchominus);
+  
+        function on_backchoplus(){
+            backcho_input.value++;
+        }
+        function on_backchominus(){
+            if(backcho_input.value>0){
+                backcho_input.value--;
+            }            
+        }
+    
+        camo_input = document.getElementById("camoinput");
+        camo_input.value = 0;
+        document.getElementById("camoplus").addEventListener('click',on_camoplus);
+        document.getElementById("camominus").addEventListener('click',on_camominus);
+  
+        function on_camoplus(){
+            camo_input.value++;
+        }
+        function on_camominus(){
+            if(camo_input.value>0){
+                camo_input.value--;
+            }            
+        }
+     
+        backsba_input = document.getElementById("backsbainput");
+        backsba_input.value = 0;
+        document.getElementById("backsbaplus").addEventListener('click',on_backsbaplus);
+        document.getElementById("backsbaminus").addEventListener('click',on_backsbaminus);
+  
+        function on_backsbaplus(){
+            backsba_input.value++;
+        }
+        function on_backsbaminus(){
+            if(backsba_input.value>0){
+                backsba_input.value--;
+            }            
+        }
+       
+        backsstrw_input = document.getElementById("backsstrwinput");
+        backsstrw_input.value = 0;
+        document.getElementById("backsstrwplus").addEventListener('click',on_backsstrwplus);
+        document.getElementById("backsstrwminus").addEventListener('click',on_backsstrwminus);
+  
+        function on_backsstrwplus(){
+            backsstrw_input.value++;
+        }
+        function on_backsstrwminus(){
+            if(backsstrw_input.value>0){
+                backsstrw_input.value--;
+            }            
+        }
+ 
+        milktea_input = document.getElementById("milkteainput");
+        milktea_input.value = 0;
+        document.getElementById("milkteaplus").addEventListener('click',on_milkteaplus);
+        document.getElementById("milkteaminus").addEventListener('click',on_milkteaminus);
+  
+        function on_milkteaplus(){
+            milktea_input.value++;
+        }
+        function on_milkteaminus(){
+            if(milktea_input.value>0){
+                milktea_input.value--;
+            }            
+        }
+  
+    </script>
+</body>
+</html>
