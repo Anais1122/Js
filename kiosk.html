@@ -92,12 +92,13 @@
             }            
         }
         function on_btn_total_commit(){
-            sum = (2000 * aa_input.value)+(2500 * coldb_input.value)+(2500 * backsc_input.value)+(2000 * backcho_input.value)+(3000 * camo_input.value)
-            +(3500 * backsba_input.value)+(4000 * backsstrw_input.value)+(4500 * milktea_input.value)+(4000 * dia_input.value)+(4000 * minput.value);
+            sum = (2000 * aainput.value)+(2500 * coldbinput.value)+(2500 * backscinput.value)+(2000 * backchoinput.value)+(3000 * camoinput.value)
+            +(3500 * backsbainput.value)+(4000 * backsstrwinput.value)+(4500 * milkteainput.value)+(4000 * diainput.value)+(4000 * minput.value);
             com = sum
             comma = com.toLocaleString('ko-KR');
             alert("총 가격은 "+comma+"원 입니다.");
-            sum_input.value='';
+            alert("총 가격은 "+comma+"원 입니다.");
+            location.reload();
         }
         function on_btn_set_clear(){
             location.reload();
@@ -228,6 +229,7 @@
                 m_input.value--;
             }            
         }
+        
     </script>
 </body>
 </html>
