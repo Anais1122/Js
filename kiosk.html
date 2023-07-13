@@ -6,66 +6,74 @@
     <title>Document</title>
 </head>
 <style>
-    
+   
+    .bt:hover{
+            background-color: rgb(220, 245, 235);
+    }
     .inputbox{
-        background-color: rgb(236, 235, 244);
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
+        
+        background-color: antiquewhite;
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
         font-style: italic;
         text-align: center;
     }
     .bt{
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
-    }
-    .aa_input{
-        border: 0;
+        background-color: rgb(236, 235, 244);
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
         text-align: center;
-        font-size: 15px;
-        width: 120px;
-        
     }
-      
+   
+          
 </style>
 <body>
-    <table border="1">
+    <table border="1" rulse="none">
         <tr>        
-            <td align="center" colspan="5"> ORDER KIOSK <width="300" height="300" font-size="200"></width></td><br>
+            <td align="center" colspan="6" ><img src="back.png" width="600" height="100"> </td><br>
+            </tr>
         <tr>
             <td align="center"><img src="aa.png" width="120" height="150"><br>
-                ICE아메리카노<br>
-                <button id = 'aaminus'>-</button><input type="text" id ='aainput' class="inputbox"><button id="aaplus">+</button></td>
+                ICE Americano<br>
+                <button id = 'aaminus' class="bt">↓</button><input type="text" id ='aainput' class="inputbox"><button id="aaplus" class="bt">↑</button></td>
             <td align="center"><img src="coldb.png" width="120" height="150"><br>
-                백스콜드브루<br>
-                <button id = 'coldbminus'>-</button><input type="text" id ='coldbinput' class="inputbox"><button id="coldbplus">+</button></td>
+                COLDBREW<br>
+                <button id = 'coldbminus' class="bt">↓</button><input type="text" id ='coldbinput' class="inputbox"><button id="coldbplus" class="bt">↑</button></td>
             <td align="center"><img src="backsc.png" width="120" height="150"><br>
-                백스자바<br>
-                <button id = 'backscminus'>-</button><input type="text" id ='backscinput' class="inputbox"><button id="backscplus">+</button></td>
+                PAIKS JAVA<br>
+                <button id = 'backscminus' class="bt">↓</button><input type="text" id ='backscinput' class="inputbox"><button id="backscplus" class="bt">↑</button></td>
             <td align="center"><img src="backcho.png" width="120" height="150"><br>
-                백스초코<br>
-                <button id = 'backchominus'>-</button><input type="text" id ='backchoinput' class="inputbox"><button id="backchoplus">+</button></td>
-            <td rowspan="3"><img src="back.png"></td>
+                PAIKS CHOCO<br>
+                <button id = 'backchominus' class="bt">↓</button><input type="text" id ='backchoinput' class="inputbox"><button id="backchoplus" class="bt">↑</button></td>
+            <td align="center"><img src="dia.png" width="120" height="150"><br>
+                RED POTION<br>
+                <button id = 'diaminus' class="bt">↓</button><input type="text" id ='diainput' class="inputbox"><button id="diaplus" class="bt">↑</button></td>        
+            <td rowspan="3"><img src="back2.png"  width="250" height="180"></td>
         
         </tr>
         <tr>
             <td align="center"><img src="camo.png" width="120" height="150"><br>
-                캐모마일<br>
-                <button id = 'camominus'>-</button><input type="text" id ='camoinput' class="inputbox"><button id="camoplus">+</button></td>
+                Chamomile<br>
+                <button id = 'camominus' class="bt">↓</button><input type="text" id ='camoinput' class="inputbox"><button id="camoplus" class="bt">↑</button></td>
             <td align="center"><img src="backsba.png" width="120" height="150"><br>
-                백스바나나<br>
-                <button id = 'backsbaminus'>-</button><input type="text" id ='backsbainput' class="inputbox"><button id="backsbaplus">+</button></td>
+                PAIKS BANANA<br>
+                <button id = 'backsbaminus' class="bt">↓</button><input type="text" id ='backsbainput' class="inputbox"><button id="backsbaplus" class="bt">↑</button></td>
             <td align="center"><img src="backsstrw.png" width="120" height="150"><br>
-                백스딸기<br>
-                <button id = 'backsstrwminus'>-</button><input type="text" id ='backsstrwinput' class="inputbox"><button id="backsstrwplus">+</button></td>
+                PAIKS Strawberry<br>
+                <button id = 'backsstrwminus' class="bt">↓</button><input type="text" id ='backsstrwinput' class="inputbox"><button id="backsstrwplus" class="bt">↑</button></td>
             <td align="center"><img src="milktea.png" width="120" height="150"><br>
-                백스밀크티<br>
-                <button id = 'milkteaminus'>-</button><input type="text" id ='milkteainput' class="inputbox"><button id="milkteaplus">+</button></td>
+                PAIKS MLIKTEA<br>
+                <button id = 'milkteaminus' class="bt">↓</button><input type="text" id ='milkteainput' class="inputbox"><button id="milkteaplus" class="bt">↑</button></td>
+            <td align="center"><img src="m.png" width="120" height="150"><br>
+                ICE MELON<br>
+                <button id = 'mminus' class="bt">↓</button><input type="text" id ='minput' class="inputbox"><button id="mplus" class="bt">↑</button></td>
         </tr>
         <tr>
-            <td align="center" colspan="2"><button id="btn_set_clear">초기화</button></td>
-            <td align="center" colspan="2"><button id="btn_total_commit">계산</button></td>
+            <td align="center" colspan="2"><button id="btn_set_clear">처음부터</button></td>
+            <td></td>
+            <td align="center" colspan="2"><button id="btn_total_commit">결제</button></td>
         </tr>
     </table>
     <script>
@@ -85,7 +93,7 @@
         }
         function on_btn_total_commit(){
             sum = (2000 * aa_input.value)+(2500 * coldb_input.value)+(2500 * backsc_input.value)+(2000 * backcho_input.value)+(3000 * camo_input.value)
-            +(3500 * backsba_input.value)+(4000 * backsstrw_input.value)+(4500 * milktea_input.value);
+            +(3500 * backsba_input.value)+(4000 * backsstrw_input.value)+(4500 * milktea_input.value)+(4000 * dia_input.value)+(4000 * minput.value);
             com = sum
             comma = com.toLocaleString('ko-KR');
             alert("총 가격은 "+comma+"원 입니다.");
@@ -194,7 +202,32 @@
                 milktea_input.value--;
             }            
         }
+        dia_input = document.getElementById("diainput");
+        dia_input.value = 0;
+        document.getElementById("diaplus").addEventListener('click',on_diaplus);
+        document.getElementById("diaminus").addEventListener('click',on_diaminus);
   
+        function on_diaplus(){
+            dia_input.value++;
+        }
+        function on_diaminus(){
+            if(dia_input.value>0){
+                dia_input.value--;
+            }            
+        }
+        m_input = document.getElementById("minput");
+        m_input.value = 0;
+        document.getElementById("mplus").addEventListener('click',on_mplus);
+        document.getElementById("mminus").addEventListener('click',on_mminus);
+  
+        function on_mplus(){
+            m_input.value++;
+        }
+        function on_mminus(){
+            if(m_input.value>0){
+                m_input.value--;
+            }            
+        }
     </script>
 </body>
 </html>
