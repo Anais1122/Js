@@ -18,6 +18,7 @@
         font-size: 32px;
         font-style: italic;
         text-align: center;
+        border-radius: 30px;
     }
     .bt{
         background-color: rgb(236, 235, 244);
@@ -25,6 +26,15 @@
         height: 35px;
         font-size: 25px;
         text-align: center;
+        border-radius: 30px;
+    }
+    .bt1{
+        background-color: aquamarine;
+        width: 100px;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 30px;
     }
    
           
@@ -71,9 +81,9 @@
                 <button id = 'mminus' class="bt">↓</button><input type="text" id ='minput' class="inputbox"><button id="mplus" class="bt">↑</button></td>
         </tr>
         <tr>
-            <td align="center" colspan="2"><button id="btn_set_clear">처음부터</button></td>
+            <td align="center" colspan="2"><button id="btn_set_clear" class="bt1">처음부터</button></td>
             <td></td>
-            <td align="center" colspan="2"><button id="btn_total_commit">결제</button></td>
+            <td align="center" colspan="2"><button id="btn_total_commit" class="bt1">결제</button></td>
         </tr>
     </table>
     <script>
@@ -96,7 +106,6 @@
             +(3500 * backsbainput.value)+(4000 * backsstrwinput.value)+(4500 * milkteainput.value)+(4000 * diainput.value)+(4000 * minput.value);
             com = sum
             comma = com.toLocaleString('ko-KR');
-            alert("총 가격은 "+comma+"원 입니다.");
             alert("총 가격은 "+comma+"원 입니다.");
             location.reload();
         }

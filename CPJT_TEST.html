@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+    <div class="promotionBanner">
+        <img src="pet.png" width="1400" height="250"><br>
+        <a href = "none" class="bannerLink">
+        </div>
+     
+ </header>
+
+<style>
+  #topMenu {
+            height: 30px; 
+            width: 850px;
+    }
+    #topMenu ul {         
+        list-style-type: none;
+        margin: 0px;          
+        padding: 0px;          
+    }
+    #topMenu ul li {       
+        color: white;              
+        background-color: #ec8d8d; 
+        float: left;               
+        line-height: 30px;        
+        vertical-align: middle;   
+        text-align: center;  
+        position: relative;    
+    }   
+    .menuLink, .submenuLink {   
+        text-decoration:none;       
+        display: block;           
+        width: 150px;             
+        font-size: 12px;                   
+        font-weight: bold;          
+        font-family: "Trebuchet MS", Dotum; 
+    }
+    .menuLink { 
+        color: white;
+    }
+    .topMenuLi:hover .menuLink {
+        color: red;               
+        background-color: #fc9999; 
+    }
+    .submenuLink {
+        color: #2d2d2d;          
+        background-color: white;
+        border: solid 1px rgb(240, 86, 86);
+        margin-top: -1px;
+    }
+    .longLink {
+        width: 190px;
+    }
+    .submenu {
+        position: absolute;    
+        height: 0px;            
+        overflow: hidden;      
+        transition: height .2s; 
+        -webkit-transition: height .2s; 
+        -moz-transition: height .2s;
+        -o-transition: height .2s;
+    }
+    .topMenuLi:hover .submenu { 
+        height: 93px;          
+    }
+    .submenuLink:hover {        
+        color: red;         
+        background-color: #dddddd; 
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        var slider = $('#top_banner').show().bxSlider({
+            mode: 'vertical',
+            auto: true,
+            speed:800,
+            pager:false,
+            controls:true,
+            nextSelector: '#slider-next',
+            prevSelector: '#slider-prev',
+            prevText: '<button type="button" data-role="none" class="bxslider_btn_prev" aria-label="Prev" role="button" style="display: block;">prev</button>',
+            nextText: '<button type="button" data-role="none" class="bxslider_btn_next" aria-label="Next" role="button" style="display: block;">next</button>',
+            onSlideAfter : function(){
+                slider.startAuto();
+            }
+        });
+    });    
+    </script>
+
+ <div id="topMenu" >
+     <ul>
+        <li class="topMenuLi">
+               <a class="menuLink">사료</a>
+               <ul class="submenu">
+                   <li><a class="submenuLink">전연령용</a></li>
+                   <li><a class="submenuLink">성견용</a></li>
+                   <li><a class="submenuLink">노견용</a></li>
+               </ul>
+           </li>
+        <li>|</li>
+           <li class="topMenuLi">
+               <a class="menuLink">산책/이동장</a>
+           <ul class="submenu">
+           <li><a class="submenuLink">목줄</a></li>
+           <li><a class="submenuLink">켄넬</a></li>
+           </ul>
+           </li>
+        <li>|</li>
+           <li class="topMenuLi">
+               <a class="menuLink">하우스/울타리</a>
+               <ul class="submenu">
+                   <li><a class="submenuLink">하우스</a></li>
+                   <li><a class="submenuLink">방석/쿠션</a></li>
+                   <li><a class="submenuLink">울타리</a></li>
+               </ul>
+           </li>
+        <li>|</li>
+           <li class="topMenuLi">
+               <a class="menuLink">회원정보</a>
+           <ul class="submenu">
+           <li><a class="submenuLink">정보수정</a></li>
+           <li><a class="submenuLink">장바구니</a></li>
+           </ul>
+           </li>
+        <li>|</li>
+           <li class="topMenuLi">
+               <a class="menuLink">고객센터</a>
+           <ul class="submenu">
+           <li><a class="submenuLink">공지사항</a></li>
+           <li><a class="submenuLink">FAQ</a></li>
+           <li><a class="submenuLink">Q&A</a></li>
+           <li><a class="submenuLink">1:1문의</a></li>
+           </ul>
+           </li>
+
+    <body>       
+        <div class="company-info">
+            <div class="center-info">
+                <h2>고객센터 0000-0000</h2>
+                <dl style="margin-bottom:3px;">
+                    <dt>평일 10:00 ~ 17:30</dt>
+                </dl>
+                <dl style="margin-bottom:3px;">
+                    <dt>점심시간 12:00 ~ 13:00</dt>
+                </dl><br>
+                <b>고객센터</b>: &nbsp;&nbsp;&nbsp;&nbsp;토,일 / 공휴일 휴무<br>
+                <b>택배출고</b>: &nbsp;&nbsp;&nbsp;&nbsp;평일 오후 5시까지
+
+            </div>
+            <div class="add-ceo">
+                <span>(주)PetBoutique | 대표이사 : Globlal</span>
+                <address>경기도 화성시 병점동 병점길</address>
+                <div>사업자 등록번호 : 000-00-00000<br/>통신판매업신고 : 제0000-경기병점-401호<br/>이메일 : <a href="mailto:global@global.com">global@global.com</a><br></div>
+                <span>ⓒPetBoutique Inc. All Rights Reserved.</span>
+
+ </nav></ul>
+</body>
+</html>
