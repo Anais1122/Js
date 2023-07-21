@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript로 상단과 하단 프레임 분할</title>
+</head>
+<body>
+  <div id="topFrame">
+    <a href="https://www.naver.com" target="bottom">네이버로 이동</a>
+  </div>
+  <div id="bottomFrame" name="bottom"></div>
+
+  <script>
+    window.addEventListener("message", function(event) {
+      var messageData = event.data;
+      if (messageData.type === "updateBottomFrame") {
+        var bottomFrame = window.frames["bottom"];
+        bottomFrame.document.body.innerHTML = messageData.content;
+      }
+    });
+  </script>
+</body>
+</html>

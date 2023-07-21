@@ -3,145 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="shopping.css"> 
+    <title>PET BOUTIQUE</title>  
 </head>
+<style>
+.main_img{
+    width: auto;
+    height: auto;
+    max-width: 800px;
+    max-height: 500px;
+    }
+.content table {
+        margin: 0 auto;
+        width: 50%; 
+        text-align: center;
+    }
+.content table img {
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%; 
+        max-height: 100%; 
+    }    
+.text1{
+    text-align: center;
+    font-size: 60px;
+    font-style: normal;
+}
+</style>
+
 <body>
-    <nav id="gnb">
-        <h2>쇼핑몰 카테고리</h2>
-        <button type="button" id="menu_open"><img src="1.png" alt="HOME">ALL</button>
-        <ul id="gnb_1dul" style="display: none;">
-                    <li class="gnb_1dli" style="z-index:998">
-                <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=10" class="gnb_1da gnb_1dam">브랜드별사료</a>
-                <ul class="gnb_2dul" style="z-index:998">                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1010" class="gnb_2da">브랜드1</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1020" class="gnb_2da">브랜드2</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1030" class="gnb_2da">브랜드3</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1040" class="gnb_2da">브랜드4</a></li>
-                </ul>        </li>
-                    <li class="gnb_1dli" style="z-index:997">
-                <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=20" class="gnb_1da gnb_1dam">종류별간식</a>
-                <ul class="gnb_2dul" style="z-index:997">                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2010" class="gnb_2da">육포/사사미간식</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2020" class="gnb_2da">육포/져키간식</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2030" class="gnb_2da">명품수제간식</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2040" class="gnb_2da">강아지 덴탈껌</a></li>
-                </ul>        </li>
-                    <li class="gnb_1dli" style="z-index:996">
-                <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=30" class="gnb_1da gnb_1dam">장난감</a>
-                <ul class="gnb_2dul" style="z-index:996">                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3010" class="gnb_2da">실타래 장난감</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3020" class="gnb_2da">노즈워크 매트</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3030" class="gnb_2da">봉제장난감</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3040" class="gnb_2da">공모양/원반</a></li>
-                </ul>        </li>
-                    <li class="gnb_1dli" style="z-index:995">
-                <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=40" class="gnb_1da gnb_1dam">목욕용품</a>
-                <ul class="gnb_2dul" style="z-index:995">                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4010" class="gnb_2da">눈 관리용품</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4020" class="gnb_2da">귀 관리용품</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4030" class="gnb_2da">구강 관리용품</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4040" class="gnb_2da">샴푸/린스</a></li>
-                </ul>        </li>
-                    <li class="gnb_1dli" style="z-index:994">
-                <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=50" class="gnb_1da gnb_1dam">위생용품</a>
-                <ul class="gnb_2dul" style="z-index:994">                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5010" class="gnb_2da">배변패드</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5020" class="gnb_2da">배변판</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5030" class="gnb_2da">기저귀/팬티</a></li>
-                                <li class="gnb_2dli"><a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5040" class="gnb_2da">탈취제/소독제</a></li>
-                </ul>        </li>
-                </ul>
-    </nav>
-    <!-- } 쇼핑몰 카테고리 끝 -->
-                    <div id="category">
-        <div class="close_btn_box">
-            <button type="button" class="close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
-        </div>
-    
-        <div class="ct_wr">
-            <ul class="cate">
-                <li class="cate_li_1">
-                    <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=10" class="cate_li_1_a">브랜드별사료</a>
-                    <ul class="sub_cate sub_cate1">
-                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1010">브랜드1</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1020">브랜드2</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1030">브랜드3</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=1040">브랜드4</a>
-                        </li>
-                    </ul>
-                </li>
-                        <li class="cate_li_1">
-                    <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=20" class="cate_li_1_a">종류별간식</a>
-                    <ul class="sub_cate sub_cate1">
-                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2010">육포/사사미간식</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2020">육포/져키간식</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2030">명품수제간식</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=2040">강아지 덴탈껌</a>
-                        </li>
-                    </ul>
-                </li>
-                        <li class="cate_li_1">
-                    <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=30" class="cate_li_1_a">장난감</a>
-                    <ul class="sub_cate sub_cate1">
-                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3010">실타래 장난감</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3020">노즈워크 매트</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3030">봉제장난감</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=3040">공모양/원반</a>
-                        </li>
-                    </ul>
-                </li>
-                        <li class="cate_li_1">
-                    <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=40" class="cate_li_1_a">목욕용품</a>
-                    <ul class="sub_cate sub_cate1">
-                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4010">눈 관리용품</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4020">귀 관리용품</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4030">구강 관리용품</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=4040">샴푸/린스</a>
-                        </li>
-                    </ul>
-                </li>
-                        <li class="cate_li_1">
-                    <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=50" class="cate_li_1_a">위생용품</a>
-                    <ul class="sub_cate sub_cate1">
-                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5010">배변패드</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5020">배변판</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5030">기저귀/팬티</a>
-                        </li>
-                                        <li class="cate_li_2">
-                            <a href="http://www.mall3.dwebs1.kr/shop/list.php?ca_id=5040">탈취제/소독제</a>
-                        </li>
-                    </ul>
-                </li>
+    <header>
+    <div class="header">
+        <shop class="navbar">
+            <div class="shop__logo">
+                <i class="fab fa-accusoft"></i>
+                <i class="fa-solid fa-user"></i>      
+                <a href="">PET BOUTIQUE</a>
+            </div>
+          
+            <ul class="navbar__menu">
+                <li><a href="">Login</a></li>
+                <li><a href="">Join</a></li>
+                <li><a href="">장바구니</a></li>
+                <li><a href="">FAQ</a></li>
             </ul>
-        </div>
+    
+            <a href="#" class="navbar__toggleBtn">
+                <i class="fas fa-bars"></i>
+            </a>            
+        </nav>
+     </div>
+    </header>
+
+    <div id="slideshow" >
+        <img src="111.png" alt="Image 1">
+        <img src="111.png" alt="Image 2">
+        <img src="camo.png" alt="Image 3">
+        <div class="prevButton">&lt;</div>
+        <div class="nextButton">&gt;</div>
     </div>
-</body>
-</html>
+
+
+    <div class = "middlebar"> 
+        <nav class="middle__bar">          
+            <ul class="middle__menu">
+                <li><a href="brand01.html">사료</a></li>
+                <li><a href="brand02.html">이동장</a></li>
+                <li><a href="brand03.html">하우스</a></li>             
+             </ul>
+        </nav>
+    </div>
+    
+    <div class = "middlebar">
+        <nav class="middle__bar">
+            <ul class="middle__menu">
+                <li><a href="brand01.html">BEST 사료</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="text1">BEST 사료 </div><br>
+        <table border="0">             
+                <tr>
+                    <td align="center"><img src="aa.png" width="120" height="150"><br>
+                        용도: 영개용 사료<br>
+                        가격 9000 원<br>
+                       
+                    </td>   
+                    <td align="center"><img src="coldb.png" width="120" height="150"><br>
+                        노인개 사료<br>
+                        가격 : 10000 원<br>
+                       
+                    </td>
+                    <td align="center"><img src="backsc.png" width="120" height="150"><br>
+                        체중조절 사료<br>
+                        가격 : 10000 원
+                        
+                    </td>    
+                    <td align="center"><img src="backcho.png" width="120" height="150"><br>
+                        당노조절 사료<br>
+                        가격 : 12000 원<br>
+                    </td>                                              
+                </tr><br                        >
+        </table><br><br>        
+    
+        <div class="text1"><a href="brand01.html">BEST 이동장</a></div><br>
+            <table border="0">             
+                <tr>
+                    <td align="center"><img src="aa.png" width="120" height="150"><br>
+                        용도: 푸르미 이동장<br>
+                        가격 22000 원<br>
+                    </td>                     
+    
+                    <td align="center"><img src="coldb.png" width="120" height="150"><br>
+                        닥터펫 핑크 이동장<br>
+                        가격 : 31500 원<br>
+                    </td>
+                               
+                             
+                    <td align="center"><img src="backsc.png" width="120" height="150"><br>
+                        푸르미 그린 이동장<br>
+                        가격 : 22000 원
+                    </td>            
+                                
+                    <td align="center"><img src="backcho.png" width="120" height="150"><br>
+                        아이맥 이동장<br>
+                        가격 : 12000 원<br>
+                    </td>                                              
+                </tr>
+            </table><br><br>
+        
+            <div class="text1">BEST 장난감</div>
+            <table border="0">             
+                <tr>
+                    <td align="center"><img src="aa.png" width="120" height="150"><br>
+                        용도: 푸르미 이동장<br>
+                        가격 22000 원<br>
+                    </td>                           
+                                               
+                    <td align="center"><img src="coldb.png" width="120" height="150"><br>
+                        닥터펫 핑크 이동장<br>
+                        가격 : 31500 원<br>
+                    </td>                           
+                                             
+                    <td align="center"><img src="backsc.png" width="120" height="150"><br>
+                        푸르미 그린 이동장<br>
+                        가격 : 22000 원
+                    </td>                            
+                                                
+                    <td align="center"><img src="backcho.png" width="120" height="150"><br>
+                        아이맥 이동장<br>
+                        가격 : 12000 원<br>
+                    </td>                                                  
+                </tr>                
+        </table> 
+    </div>
+   
+      <div class="endbar">
+        <nav class="end__bar">
+            <ul class="end__menu">
+                <li>
+                    <div id='zz' class="zzfont">
+                        고객센터 <br>
+                        0507.1111.2345

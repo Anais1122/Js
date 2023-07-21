@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    .bt:hover{
+            background-color: rgb(220, 245, 235);
+    }
+    .inputbox{
+        
+        background-color: antiquewhite;
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
+        font-style: italic;
+        text-align: center;
+        border-radius: 30px;
+    }
+    .bt{
+        background-color: rgb(236, 235, 244);
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+        text-align: center;
+        border-radius: 30px;
+    }
+    .bt1{
+        background-color: aquamarine;
+        width: 100px;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 30px;
+    }
+   
+          
+</style>
+<body>
+    <input type = "checkbox" id = "shot"> 샷추가<br>
+    <input type = "checkbox" id = "milk"> 우유추가<br>
+    <button id="set" onclick="test()">계산</button><br>
+    <input type ="text" id="input">
+    <a href="session.html">이동</a>
+
+    <script>
+        function test() {
+            option1=0;
+            option2=0;
+            if(document.getElementById("shot").check==true){
+                option1=1;
+            }
+            if(document.getElementById("milk").check==true){
+                option2=1;
+            }
+            sum = 2000+ (option1*500 + option2*400);
+            input.value = sum;
+            var Ameriano_money = sum;
+            sessionStorage.setItem("Americano_money",Americano_money);
+        }
+    </script>
+<body>
+    <table border="1" rulse="none">
+        <tr>        
+            <td align="center" colspan="6" ><img src="back.png" width="600" height="100"> </td><br>
+            </tr>
+        <tr>
+            <td align="center"><img src="aa.png" width="120" height="150"><br>
+                ICE Americano<br>
+                <button id = 'aaminus' class="bt">↓</button><input type="text" id ='aainput' class="inputbox"><button id="aaplus" class="bt">↑</button></td>
+            <td align="center"><img src="coldb.png" width="120" height="150"><br>
+                COLDBREW<br>
+                <button id = 'coldbminus' class="bt">↓</button><input type="text" id ='coldbinput' class="inputbox"><button id="coldbplus" class="bt">↑</button></td>
+            <td align="center"><img src="backsc.png" width="120" height="150"><br>
+                PAIKS JAVA<br>
+                <button id = 'backscminus' class="bt">↓</button><input type="text" id ='backscinput' class="inputbox"><button id="backscplus" class="bt">↑</button></td>
+            <td align="center"><img src="backcho.png" width="120" height="150"><br>
+                PAIKS CHOCO<br>
+                <button id = 'backchominus' class="bt">↓</button><input type="text" id ='backchoinput' class="inputbox"><button id="backchoplus" class="bt">↑</button></td>
+            <td align="center"><img src="dia.png" width="120" height="150"><br>
+                RED POTION<br>
+                <button id = 'diaminus' class="bt">↓</button><input type="text" id ='diainput' class="inputbox"><button id="diaplus" class="bt">↑</button></td>        
+            <td rowspan="3"><img src="back2.png"  width="250" height="180"></td>
+        
+        </tr>
+        <tr>
+            <td align="center"><img src="camo.png" width="120" height="150"><br>
+                Chamomile<br>
+                <button id = 'camominus' class="bt">↓</button><input type="text" id ='camoinput' class="inputbox"><button id="camoplus" class="bt">↑</button></td>
+            <td align="center"><img src="backsba.png" width="120" height="150"><br>
+                PAIKS BANANA<br>
+                <button id = 'backsbaminus' class="bt">↓</button><input type="text" id ='backsbainput' class="inputbox"><button id="backsbaplus" class="bt">↑</button></td>
+            <td align="center"><img src="backsstrw.png" width="120" height="150"><br>
+                PAIKS Strawberry<br>
+                <button id = 'backsstrwminus' class="bt">↓</button><input type="text" id ='backsstrwinput' class="inputbox"><button id="backsstrwplus" class="bt">↑</button></td>
+            <td align="center"><img src="milktea.png" width="120" height="150"><br>
+                PAIKS MLIKTEA<br>
+                <button id = 'milkteaminus' class="bt">↓</button><input type="text" id ='milkteainput' class="inputbox"><button id="milkteaplus" class="bt">↑</button></td>
+            <td align="center"><img src="m.png" width="120" height="150"><br>
+                ICE MELON<br>
+                <button id = 'mminus' class="bt">↓</button><input type="text" id ='minput' class="inputbox"><button id="mplus" class="bt">↑</button></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><button id="btn_set_clear" class="bt1">처음부터</button></td>
+            <td></td>
+            <td align="center" colspan="2"><button id="btn_total_commit" class="bt1">결제</button></td>
+        </tr>
+    </table>
+    <script>
+        aa_input = document.getElementById("aainput");
+        aa_input.value = 0;
+        document.getElementById("aaplus").addEventListener('click',on_aaplus);
+        document.getElementById("aaminus").addEventListener('click',on_aaminus);
+        document.getElementById("btn_total_commit").addEventListener('click',on_btn_total_commit);
+        document.getElementById("btn_set_clear").addEventListener('click',on_btn_set_clear);
+        function on_aaplus(){
+            aa_input.value++;
+        }
+        function on_aaminus(){
+            if(aa_input.value>0){
+                aa_input.value--;
+            }            
+        }
+        function on_btn_total_commit(){
+            sum = (2000 * aainput.value)+(2500 * coldbinput.value)+(2500 * backscinput.value)+(2000 * backchoinput.value)+(3000 * camoinput.value)
+            +(3500 * backsbainput.value)+(4000 * backsstrwinput.value)+(4500 * milkteainput.value)+(4000 * diainput.value)+(4000 * minput.value);
+            com = sum
+            comma = com.toLocaleString('ko-KR');
+            alert("총 가격은 "+comma+"원 입니다.");
+            location.reload();
+        }
+        function on_btn_set_clear(){
+            location.reload();
+        }    
+        coldb_input = document.getElementById("coldbinput");
+        coldb_input.value = 0;
+        document.getElementById("coldbplus").addEventListener('click',on_coldbplus);
+        document.getElementById("coldbminus").addEventListener('click',on_coldbminus);
+  
+        function on_coldbplus(){
+            coldb_input.value++;
+        }
+        function on_coldbminus(){
+            if(coldb_input.value>0){
+                coldb_input.value--;
+            }            
+        }
+   
+        function on_btn_set_clear(){
+            location.reload();
+        } 
+        backsc_input = document.getElementById("backscinput");
+        backsc_input.value = 0;
+        document.getElementById("backscplus").addEventListener('click',on_backscplus);
+        document.getElementById("backscminus").addEventListener('click',on_backscbminus);
+  
+        function on_backscplus(){
+            backsc_input.value++;
+        }
+        function on_backscbminus(){
+            if(backsc_input.value>0){
+                backsc_input.value--;
+            }            
+        }
+
+        backcho_input = document.getElementById("backchoinput");
+        backcho_input.value = 0;
+        document.getElementById("backchoplus").addEventListener('click',on_backchoplus);
+        document.getElementById("backchominus").addEventListener('click',on_backchominus);
+  
+        function on_backchoplus(){
+            backcho_input.value++;
+        }
+        function on_backchominus(){
+            if(backcho_input.value>0){
+                backcho_input.value--;
+            }            
+        }
+    
+        camo_input = document.getElementById("camoinput");
+        camo_input.value = 0;
+        document.getElementById("camoplus").addEventListener('click',on_camoplus);
+        document.getElementById("camominus").addEventListener('click',on_camominus);
+  
+        function on_camoplus(){
+            camo_input.value++;
+        }
+        function on_camominus(){
+            if(camo_input.value>0){
+                camo_input.value--;
+            }            
+        }
+     
+        backsba_input = document.getElementById("backsbainput");
+        backsba_input.value = 0;
+        document.getElementById("backsbaplus").addEventListener('click',on_backsbaplus);
+        document.getElementById("backsbaminus").addEventListener('click',on_backsbaminus);
+  
+        function on_backsbaplus(){
+            backsba_input.value++;
+        }
+        function on_backsbaminus(){
+            if(backsba_input.value>0){
+                backsba_input.value--;
+            }            
+        }
+       
+        backsstrw_input = document.getElementById("backsstrwinput");
+        backsstrw_input.value = 0;
+        document.getElementById("backsstrwplus").addEventListener('click',on_backsstrwplus);
+        document.getElementById("backsstrwminus").addEventListener('click',on_backsstrwminus);
+  
+        function on_backsstrwplus(){
+            backsstrw_input.value++;
+        }
+        function on_backsstrwminus(){
+            if(backsstrw_input.value>0){
+                backsstrw_input.value--;
+            }            
+        }
+ 
+        milktea_input = document.getElementById("milkteainput");
+        milktea_input.value = 0;
+        document.getElementById("milkteaplus").addEventListener('click',on_milkteaplus);
+        document.getElementById("milkteaminus").addEventListener('click',on_milkteaminus);
+  
+        function on_milkteaplus(){
+            milktea_input.value++;
+        }
+        function on_milkteaminus(){
+            if(milktea_input.value>0){
+                milktea_input.value--;
+            }            
+        }
+        dia_input = document.getElementById("diainput");
+        dia_input.value = 0;
+        document.getElementById("diaplus").addEventListener('click',on_diaplus);
+        document.getElementById("diaminus").addEventListener('click',on_diaminus);
+  
+        function on_diaplus(){
+            dia_input.value++;
+        }
+        function on_diaminus(){
+            if(dia_input.value>0){
+                dia_input.value--;
+            }            
+        }
+        m_input = document.getElementById("minput");
+        m_input.value = 0;
+        document.getElementById("mplus").addEventListener('click',on_mplus);
+        document.getElementById("mminus").addEventListener('click',on_mminus);
+  
+        function on_mplus(){
+            m_input.value++;
+        }
+        function on_mminus(){
+            if(m_input.value>0){
+                m_input.value--;
+            }            
+        }
+        
+    </script>
+</body>
+</html>
